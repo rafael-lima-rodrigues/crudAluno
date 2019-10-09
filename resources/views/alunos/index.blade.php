@@ -24,10 +24,9 @@
             <td>{{$aluno->data_matricula}}</td>
             <td>{{$aluno->nota}}</td>
             <td>
-                <button type="button" class=" btn btn-dager"
-                onclick="javascript: location.href='edit.blade.php?id'+
-                <?php echo $row['id']?>">
-                Remover</button>
+                
+                <button class="button" onclick="javascript: location.href='/alunos/{{$aluno->id}}/edit'">abrir</button>
+            
             </td>
         </tr>
             </tbody>

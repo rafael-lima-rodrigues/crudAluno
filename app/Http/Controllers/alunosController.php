@@ -56,9 +56,10 @@ class alunosController extends Controller
      * @param  \App\Alunos  $alunos
      * @return \Illuminate\Http\Response
      */
-    public function show(Alunos $alunos)
+    public function show($id)
     {
-        //
+        $alunos = Alunos::findOrFail($id);
+    return view('alunos.show', compact('alunos'));
     }
 
     /**
@@ -67,9 +68,10 @@ class alunosController extends Controller
      * @param  \App\Alunos  $alunos
      * @return \Illuminate\Http\Response
      */
-    public function edit(Alunos $alunos)
+    public function edit($id)
     {
-        //
+       $alunos = Alunos::findOrFail($id);
+       return view('alunos.edit', compact('alunos'));
     }
 
     /**

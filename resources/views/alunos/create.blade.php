@@ -10,7 +10,7 @@
         </div>
         <div>
             <label for="lbldisciplina">Disciplina: </label>
-            <input type="lbltext" id="disciplina" name="disciplina" required>
+            <input type="text" id="disciplina" name="disciplina" required>
         </div>
         <div>
             <label for="lbldata_matricula">Matricula: </label>
