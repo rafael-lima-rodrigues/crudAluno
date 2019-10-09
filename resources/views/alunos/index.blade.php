@@ -12,6 +12,7 @@
             <th scope="col">Disciplina</th>
             <th scope="col">Matricula</th>
             <th scope="col">Nota</th>
+            <th></th>
         </tr>
     </thead>
         @foreach ($alunos as $aluno)
@@ -22,6 +23,12 @@
             <td>{{$aluno->disciplina}}</td>
             <td>{{$aluno->data_matricula}}</td>
             <td>{{$aluno->nota}}</td>
+            <td>
+                <button type="button" class=" btn btn-dager"
+                onclick="javascript: location.href='edit.blade.php?id'+
+                <?php echo $row['id']?>">
+                Remover</button>
+            </td>
         </tr>
             </tbody>
         @endforeach
