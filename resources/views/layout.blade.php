@@ -17,14 +17,8 @@
         <li class="nav-item">
           <a class="nav-link text-white font-weight-bold" href="/alunos/create">Inserir Aluno</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link text-white font-weight-bold" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white font-weight-bold" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li>
       </ul>
-    <div class="container">
+    <div>
         @yield('content')
     </div>    
  

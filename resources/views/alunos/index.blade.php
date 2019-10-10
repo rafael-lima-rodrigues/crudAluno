@@ -1,11 +1,14 @@
 @extends('layout')
 
 @section('content')
-<div class="container">
-        <h2>Listar Alunos</h2>
-        <div class="container col-md-8">
+<br>
+<h2 class="text-center font-weight-bold text-success ">Listar Alunos</h2>
+<br>
+<div class="group-form">
+        
+        <div class="container col-md-12">
     <table class="table table-hover">
-    <thead class="thead-dark">
+    <thead class="table-success">
         <tr>
             <th scope="col">ID</th>
             <th scope="col">Nome</th>
@@ -19,19 +22,19 @@
         @foreach ($alunos as $aluno)
         <tr>
             <tbody>
-            <th>{{$aluno->id}}</th>
-            <td>{{$aluno->nome}}</td>
+            <th class="font-weight-bold">{{$aluno->id}}</th>
+            <td >{{$aluno->nome}}</td>
             <td>{{$aluno->disciplina}}</td>
             <td>{{$aluno->data_matricula}}</td>
             <td>{{$aluno->nota}}</td>
             <td>
-                <button class="button" onclick="javascript: location.href='/alunos/{{$aluno->id}}/edit'">abrir</button>
+                <button class="button btn btn-info " onclick="javascript: location.href='/alunos/{{$aluno->id}}/edit'">Editar</button>
             </td>
             <td>
             <form method="POST" action="/alunos/{{$aluno->id}}">
                 @method('DELETE')
                 @csrf
-                <button class="submit">DELETE</button>
+                <button class="button btn btn-danger ">Excluir</button>
             </form>
             
             </td>
