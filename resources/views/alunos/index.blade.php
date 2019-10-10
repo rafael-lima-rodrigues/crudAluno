@@ -6,7 +6,7 @@
 <br>
 <div class="group-form">
         
-        <div class="container col-md-12">
+        <div class="container col-md-10">
     <table class="table table-hover">
     <thead class="table-success">
         <tr>
