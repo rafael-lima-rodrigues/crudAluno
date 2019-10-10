@@ -13,6 +13,7 @@
             <th scope="col">Matricula</th>
             <th scope="col">Nota</th>
             <th></th>
+            <th></th>
         </tr>
     </thead>
         @foreach ($alunos as $aluno)
@@ -24,8 +25,14 @@
             <td>{{$aluno->data_matricula}}</td>
             <td>{{$aluno->nota}}</td>
             <td>
-                
                 <button class="button" onclick="javascript: location.href='/alunos/{{$aluno->id}}/edit'">abrir</button>
+            </td>
+            <td>
+            <form method="POST" action="/alunos/{{$aluno->id}}">
+                @method('DELETE')
+                @csrf
+                <button class="submit">DELETE</button>
+            </form>
             
             </td>
         </tr>

@@ -1,7 +1,8 @@
 @extends('layout')
 
 @section('content')
-<div class=" row justify-content-md-center ">
+<h1 class="text-center">Novo Aluno</h1>
+<div class=" container ">
     <form id="createAlunos" name="createAlunos" method="POST" action="/alunos">
         {{ csrf_field() }}
         <div class="row align-items-center">
@@ -14,7 +15,7 @@
         </div>
         <div>
             <label for="lbldata_matricula">Matricula: </label>
-            <input type="text" id="data_matricula" name="data_matricula" required>
+            <input type="date" id="data_matricula" name="data_matricula" required>
         </div>
         <div>
             <label for="lblnota">Nota: </label>

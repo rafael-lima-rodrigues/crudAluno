@@ -81,9 +81,17 @@ class alunosController extends Controller
      * @param  \App\Alunos  $alunos
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Alunos $alunos)
+    public function update($id)
     {
-        //
+        $aluno = Alunos::findOrFail($id);
+
+        $aluno->nome = request('nome');
+        $aluno->disciplina = request('disciplina');
+        $aluno->data_matricula = request('data_matricula');
+        $aluno->nota = request('nota');
+
+        $aluno->save();
+        return redirect('/alunos');
     }
 
     /**
@@ -92,8 +100,9 @@ class alunosController extends Controller
      * @param  \App\Alunos  $alunos
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Alunos $alunos)
+    public function destroy($id)
     {
-        //
+        Alunos::findOrFail($id)->delete();
+        return redirect('/alunos');
     }
 }
