@@ -41,7 +41,7 @@ class alunosController extends Controller
             'nome' => 'required',
             'disciplina' => 'required',
             'data_matricula' => 'required',
-            'nota' => 'required']);
+            'nota' => 'required|numeric']);
         
             
          Alunos::create($request->all());

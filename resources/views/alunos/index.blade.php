@@ -43,6 +43,13 @@
         @endforeach
 
     </table>
+    <br>
+    <br>
+    @if($message = Session::get('success'))
+        <div class="alert alert-success">
+        <p>{{$message}}</p>
+        </div>
+    @endif
 </div>
 </div>
 @endsection

@@ -39,5 +39,14 @@
 </div>
 </form>
 </div>
-    
+@if($errors->any())
+<div class="alert alert-danger">
+    <strong>Atenção!!</strong>Existem erros no formulario.<br><br>
+    <ul>
+        @foreach ($errors->all() as $error)
+    <li>{{$error}}</li>        
+        @endforeach
+    </ul>
+</div>
+    @endif
 @endsection
