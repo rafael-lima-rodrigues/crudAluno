@@ -15,4 +15,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('alunos', 'alunosController');
+
+
+
+Auth::routes(['verify' => true]);
+
+Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');;
+Route::resource('alunos', 'alunosController')->middleware('auth');;
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
